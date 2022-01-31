@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+  <script>
+//// pirma
+
+let numbers = [5, 1, 7, 2, -9, 8, 2, 7, 9, 4, -5, 2, -6, -4, 6];
+
+function doubleNumbers(numbers) {
+    return numbers.map(x => x * 2);
+}
+
+console.log(doubleNumbers(numbers));
+
+// antras
+
+
+
+/// trecia
+
+let num = [5, 1, 7, 2, -9, 8, 2, 7, 9, 4, -5, 2, -6, -4, 6];
+
+function arrCountTwos(num) {
+    return num.map(x => x * 1);
+}
+
+console.log(arrCountTwos(num));
+
+/// ketvirta
+
+function arrIndexOfFirst(arg) {
+  let rez = -1;
+  for (const [i, element] of numbers.entries()) {
+    if (element == arg) {
+      rez = i;
+      break;
+    }
+  }
+  return rez;
+}
+console.log(arrIndexOfFirst(5));
+
+//penkta
+
+let array = [4, 5, 20, 9, 17, 22, 14, 16, 18];
+let lastElement = array.pop();
+
+console.log(lastElement);
+
+// sesta
+const reversedNum = num => parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
+
+
+
+function reverseNum(num) {
+	return (
+    parseFloat(
+      num
+        .toString()
+        .split('')
+        .reverse()
+        .join('')
+    ) * Math.sign(num)
+  )
+}
+
+console.log(reversedNum(123456))
+
+// septinta
+
+function first_Greatest_Lowest(arr_num)
+{
+  arr_num.sort(function(x,y)
+           {
+           return x-y;
+           });
+  var uniqa = [arr_num[0]];
+  var result = [];
+
+  for(var j=1; j < arr_num.length; j++)
+  {
+    if(arr_num[j-1] !== arr_num[j])
+    {
+      uniqa.push(arr_num[j]);
+    }
+  }
+    result.push(uniqa[1],uniqa[uniqa.length-1]);
+  return result.join(',');
+  }
+
+console.log(first_Greatest_Lowest([8,5,4,2,7,1,9]));
+
+// astunta
+
+let counter = 0;
+
+function checkForLetters(word, letter) {
+  let words = word.toLowerCase();
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] == letter) counter++;
+  }
+  return console.log(`Yra ${counter} ${letter} raidė`);
+}
+
+checkForLetters("Nes taip yra va ", "v");
+
+// devinta
+
+var numArray = [1, 10, 5, 700, 4000, 200, 500, 30, 45, 26];
+numArray.sort(function(a, b) {
+  return a - b;
+});
+
+console.log(numArray);
+
+  </script>
+  </body>
+</html>
